@@ -94,6 +94,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.itmo.prog.exceptions" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.itmo.prog.utils" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -109,7 +112,7 @@
       <workItem from="1677614438439" duration="91000" />
       <workItem from="1677952339399" duration="44117000" />
       <workItem from="1678644728703" duration="225000" />
-      <workItem from="1679129761977" duration="27618000" />
+      <workItem from="1679129761977" duration="34009000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,7 @@ import ru.itmo.prog.utils.consoleShell.Console;
 
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Класс для контроля коллекции
@@ -67,14 +68,14 @@ public class CollectionController {
 
     @Override
     public String toString() {
-        if (collection.isEmpty()) return "Collection is empty!";
+        if (collection.isEmpty()) return "Коллекция пуста!";
 
         StringBuilder info = new StringBuilder();
         for (var product : collection) {
             info.append(product);
             info.append("\n\n");
         }
-        return info.substring(0, collection.size() - 2);
+        return info.toString();
     }
 
     /**
@@ -129,11 +130,9 @@ public class CollectionController {
     }
 
     public void removeLower(Product product){
-        for (Product element: collection){
-            if(product.compareTo(element) > 0){
-                collection.remove(element);
-            }
-        }
+        collection = collection.stream()
+                .filter(element -> product.compareTo(element) < 0)
+                .collect(Collectors.toCollection(HashSet::new));
     }
 
     public List<Product> listContainsName(String name){

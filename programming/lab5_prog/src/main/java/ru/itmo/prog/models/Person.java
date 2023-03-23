@@ -62,13 +62,11 @@ public class Person implements Validateble{
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", birthday=" + birthday +
-                ", height=" + height +
-                ", eyeColor=" + eyeColor +
-                ", hairColor=" + hairColor +
-                '}';
+        return  "\nИмя: " + name +
+                "\nДень рождения: " + birthday +
+                "\nРост:" + height +
+                "\nЦвет глаз: " + eyeColor +
+                "\nЦвет волос: " + hairColor;
     }
 
     @Override

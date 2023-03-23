@@ -1,50 +1,19 @@
 package ru.itmo.prog.utils;
 
-import ru.itmo.prog.exceptions.IncorrectScriptException;
-import ru.itmo.prog.exceptions.MustBeNotEmptyException;
-import ru.itmo.prog.utils.consoleShell.Console;
+import com.google.gson.*;
 
+import java.lang.reflect.Type;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.NoSuchElementException;
 
-public class ZonedDateTimeAdapter {
-
-    private final Console console;
-    public ZonedDateTimeAdapter(Console console) {
-        this.console = console;
+public class ZonedDateTimeAdapter implements JsonSerializer<ZonedDateTime>, JsonDeserializer<ZonedDateTime> {
+    @Override
+    public JsonElement serialize(ZonedDateTime date, Type typeOfSrc, JsonSerializationContext context) {
+        return new JsonPrimitive(date.format(DateTimeFormatter.ISO_ZONED_DATE_TIME));
     }
-    public ZonedDateTime adapt() throws IncorrectScriptException {
-        var fileMode = InputSteamer.getFileMode();
-        ZonedDateTime zonedDateTime;
-        while (true) {
-            try {
-                console.println("Введите дату и время рождения владельца(или null) в формате dd.mm.yyyy hh:mm:ss VV\n" +
-                        "Где dd - день, mm - месяц, yyyy - год, hh - часы, mm - минуты, ss - секунды и VV - регион/город\n" +
-                        "Пример: 29.06.2017 19:07:34 Asia/Dubai");
-                console.ps2();
 
-                var strZonedDateTime = InputSteamer.getScanner().nextLine().trim();
-                if (fileMode) console.println(strZonedDateTime);
-                if (strZonedDateTime.equals("null") || strZonedDateTime.isEmpty()) return null;
-                DateTimeFormatter dateTimeFormatter = DateTimeFormatter
-                        .ofPattern("dd.MM.yyyy HH:mm:ss VV");
-
-                // 2. parse date/time in String to default ZonedDateTime format
-                zonedDateTime = ZonedDateTime.parse(strZonedDateTime, dateTimeFormatter);
-                break;
-            } catch (DateTimeParseException exception) {
-                console.printError("Дата и время введены в неправильном формате!");
-                if(fileMode) throw new IncorrectScriptException();
-            }catch (NoSuchElementException exception) {
-                console.printError("Дата и время не распознаны!");
-                if (fileMode) throw new IncorrectScriptException();
-            }catch (IllegalStateException exception) {
-                console.printError("Непредвиденная ошибка!");
-                System.exit(0);
-            }
-        }
-        return zonedDateTime;
+    @Override
+    public ZonedDateTime deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
+        return ZonedDateTime.parse(json.getAsJsonPrimitive().getAsString());
     }
 }

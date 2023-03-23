@@ -25,6 +25,7 @@ public class Clear extends Command {
             return false;
         }
         collectionController.clearCollection();
+        console.println("Коллекция очищена!");
         return true;
     }
 }

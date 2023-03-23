@@ -6,10 +6,12 @@ import com.google.gson.JsonParseException;
 import com.google.gson.reflect.TypeToken;
 import ru.itmo.prog.models.Product;
 import ru.itmo.prog.utils.LocalDateTimeAdapter;
+import ru.itmo.prog.utils.ZonedDateTimeAdapter;
 import ru.itmo.prog.utils.consoleShell.Console;
 
 import java.io.*;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.*;
 
 public class DumpController {
@@ -17,6 +19,7 @@ public class DumpController {
             .setPrettyPrinting()
             .serializeNulls()
             .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
+            .registerTypeAdapter(ZonedDateTime.class, new ZonedDateTimeAdapter())
             .create();
 
     private final Console consoleChanger;

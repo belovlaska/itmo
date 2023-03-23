@@ -2,7 +2,6 @@ package ru.itmo.prog.models;
 
 import ru.itmo.prog.exceptions.*;
 import ru.itmo.prog.utils.InputSteamer;
-import ru.itmo.prog.utils.ZonedDateTimeAdapter;
 import ru.itmo.prog.utils.consoleShell.Console;
 
 import java.time.LocalDateTime;
@@ -151,7 +150,7 @@ public class ProductInput{
         return price;
     }
 
-    private UnitOfMeasure inputUnitOfMeasureType() throws InvalidValueException, IncorrectScriptException {
+    private UnitOfMeasure inputUnitOfMeasureType() throws IncorrectScriptException {
         var fileMode = InputSteamer.getFileMode();
         UnitOfMeasure unitOfMeasure;
         String strUnitOfMeasure;
@@ -162,7 +161,7 @@ public class ProductInput{
                 console.ps2();
                 strUnitOfMeasure = InputSteamer.getScanner().nextLine().trim();
                 if(fileMode) console.println(strUnitOfMeasure);
-                if(strUnitOfMeasure.isEmpty()) throw new InvalidValueException();
+                if(strUnitOfMeasure.isEmpty()) throw new MustBeNotEmptyException();
                 unitOfMeasure = UnitOfMeasure.valueOf(strUnitOfMeasure.toUpperCase());
                 break;
             }catch (NoSuchElementException exception) {
@@ -171,26 +170,38 @@ public class ProductInput{
             } catch (IllegalArgumentException exception) {
                 console.printError("Меры весов нет в списке!");
                 if (fileMode) throw new IncorrectScriptException();
-            } catch (IllegalStateException exception) {
+            }catch (MustBeNotEmptyException exception) {
+                console.printError("Мера весов не может быть пустым!");
+                if (fileMode) throw new IncorrectScriptException();
+            }catch (IllegalStateException exception) {
                 console.printError("Непредвиденная ошибка!");
                 System.exit(0);
             }
         }
         return unitOfMeasure;
     }
-    private Person inputPerson() throws IncorrectScriptException, InvalidFormException, InvalidValueException {
-
-        Person owner = new Person(
-                inputNameOfPerson(),
-                inputBirthday(),
-                inputHeight(),
-                inputEyeColor(),
-                inputHairColor());
-        if(!owner.validate()) throw new InvalidFormException();
-        return owner;
+    private Person inputPerson() throws IncorrectScriptException, InvalidFormException {
+        console.println("Введите no, чтобы не создавать владельца. Введите yes, чтобы создать владельца");
+        while (true) {
+            String inputStr = InputSteamer.getScanner().nextLine().trim();
+            if (inputStr.equals("no"))
+                return null;
+            else if (inputStr.equals("yes")) {
+                Person owner = new Person(
+                        inputNameOfPerson(),
+                        inputBirthday(),
+                        inputHeight(),
+                        inputEyeColor(),
+                        inputHairColor());
+                if (!owner.validate()) throw new InvalidFormException();
+                return owner;
+            }
+            else
+                console.println("Попробуйте еще раз");
+        }
     }
 
-    private Color inputHairColor() throws IncorrectScriptException, InvalidValueException {
+    private Color inputHairColor() throws IncorrectScriptException {
         var fileMode = InputSteamer.getFileMode();
         Color hairColor;
         while (true) {
@@ -200,7 +211,7 @@ public class ProductInput{
                 console.ps2();
                 var strHairColor = InputSteamer.getScanner().nextLine().trim();
                 if (fileMode) console.println(strHairColor);
-                if (strHairColor.isEmpty()) throw new InvalidValueException();
+                if (strHairColor.isEmpty()) throw new MustBeNotEmptyException();
                 hairColor = Color.valueOf(strHairColor.toUpperCase());
                 break;
             } catch (NoSuchElementException exception) {
@@ -209,6 +220,9 @@ public class ProductInput{
             } catch (IllegalArgumentException exception) {
                 console.printError("Цвета волос нет в списке!");
                 if (fileMode) throw new IncorrectScriptException();
+            } catch (MustBeNotEmptyException exception) {
+                console.printError("Цвет волос не может быть пустым!");
+                if(fileMode) throw new IncorrectScriptException();
             } catch (IllegalStateException exception) {
                 console.printError("Непредвиденная ошибка!");
                 System.exit(0);
@@ -274,7 +288,7 @@ public class ProductInput{
     }
 
     private ZonedDateTime inputBirthday() throws IncorrectScriptException {
-        return new ZonedDateTimeAdapter(console).adapt();
+        return new ZonedDateTimeForm(console).adapt();
     }
 
     private String inputNameOfPerson() throws IncorrectScriptException {

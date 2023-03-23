@@ -74,15 +74,13 @@ public class Product implements Validateble, Comparable<Product>{
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", coordinates=" + coordinates +
-                ", creationDate=" + creationDate +
-                ", price=" + price +
-                ", unitOfMeasure=" + unitOfMeasure +
-                ", owner=" + owner +
-                '}';
+        return "Продукт номер " + id +
+                "\nНазвание: " + name  +
+                "\nКоординаты: " + coordinates +
+                "\nДата создания: " + creationDate +
+                "\nЦена: " + price +
+                "\nЕдиницы измерения: " + unitOfMeasure +
+                "\nВладелец:" + owner;
     }
 
     @Override
@@ -91,7 +89,7 @@ public class Product implements Validateble, Comparable<Product>{
                 && name != null && !name.isEmpty()
                 && creationDate != null
                 && coordinates != null
-                && price > 0
+                && (price == null || price > 0)
                 && unitOfMeasure != null) return true;
         return false;
     }
