@@ -1,0 +1,20 @@
+javac 'Filename'.java
+javac -d target 'filename'.java
+javac --help
+
+
+jar -cfm 'JARname'.jar MANIFEST.mf *.class
+
+
+java -jar 'JARname'.jar
+java 'ClassName'
+
+(?) java 'ClassName'.class
+
+check debugging on the Net
+
+double e = 2.7;
+int notE = (int) e; // notE = 2
+int RoundE = (int) Math.round(e); //RoundE = 3
+
+
