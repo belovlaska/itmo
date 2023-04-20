@@ -1,5 +1,6 @@
 package ru.itmo.prog.commands;
 
+import ru.itmo.prog.utils.InputSteamer;
 import ru.itmo.prog.utils.consoleShell.Console;
 
 /**
@@ -8,11 +9,15 @@ import ru.itmo.prog.utils.consoleShell.Console;
  */
 public class ExecuteScript extends Command {
 
+
+    String strMaxDepth;
+    Integer maxDepth = 3;
     private final Console console;
     public ExecuteScript(Console console) {
         super("execute_script <file_name>", "исполнить скрипт из указанного файла");
         this.console = console;
     }
+
 
     @Override
     public boolean execute(String[] args) {

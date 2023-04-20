@@ -56,6 +56,9 @@ public class Product implements Validateble, Comparable<Product>{
     }
 
     public Person getOwner() {
+        if(owner == null) {
+            return null;
+        }
         return owner;
     }
 

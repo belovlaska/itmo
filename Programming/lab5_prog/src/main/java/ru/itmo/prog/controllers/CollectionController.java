@@ -202,7 +202,9 @@ public class CollectionController {
     public void validateAll(Console console) {
         try {
             for (Product element : collection) {
-                if (!element.getOwner().validate()) {
+                if(element.getOwner() == null)
+                    continue;
+                else if (!element.getOwner().validate()) {
                     console.printError("Владелец - " + element.getOwner() + " имеет невалидные поля");
                     throw new InvalidDataException();
                 }

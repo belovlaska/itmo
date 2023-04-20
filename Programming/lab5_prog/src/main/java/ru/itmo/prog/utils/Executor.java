@@ -1,5 +1,6 @@
 package ru.itmo.prog.utils;
 
+import ru.itmo.prog.commands.ExecuteScript;
 import ru.itmo.prog.controllers.CommandController;
 import ru.itmo.prog.exceptions.ScriptRecursionException;
 import ru.itmo.prog.utils.consoleShell.Console;
@@ -27,6 +28,10 @@ public class Executor {
         this.console = console;
         this.commandController = commandController;
     }
+
+    boolean flag = false;
+    Integer depth = 0;
+
 
     /**
      * Интерактивный режим
@@ -58,9 +63,16 @@ public class Executor {
      * @return Код завершения.
      */
     public ExitCode fromScript(String argument){
+
+
+
+        Integer maxDepth = 3;
         String[] inputCommand = {"", ""};
         ExitCode exitCode;
         scriptStack.add(argument);
+
+
+
 
         if (!new File(argument).exists()) {
             argument = "../" + argument;
@@ -72,7 +84,11 @@ public class Executor {
             InputSteamer.setScanner(scriptScanner);
             InputSteamer.setFileMode(true);
 
+
+
+
             do{
+
                 inputCommand = (scriptScanner.nextLine().trim()+" ").split(" ", 2);
                 inputCommand[1] = inputCommand[1].trim();
 
@@ -83,13 +99,27 @@ public class Executor {
 
                 console.println(console.getPS1() + String.join(" ", inputCommand));
                 if(inputCommand[0].equals("execute_script")){
-                    if(!scriptStack.add(inputCommand[1])) throw new ScriptRecursionException();
+                    if(!scriptStack.add(inputCommand[1]))
+                    {
+                        if(flag == false) {
+                            InputSteamer.setScanner(tmpScanner);
+                            InputSteamer.setFileMode(false);
+                            maxDepth = setMaxDepth();
+                            InputSteamer.setScanner(scriptScanner);
+                            InputSteamer.setFileMode(true);
+                            flag = true;
+                        }
+                        depth ++;
+                    }
+                    if(depth > maxDepth) throw new ScriptRecursionException();
                 }
                 exitCode = apply(inputCommand);
             } while (exitCode == ExitCode.OK && scriptScanner.hasNextLine());
 
             InputSteamer.setScanner(tmpScanner);
             InputSteamer.setFileMode(false);
+            flag = false;
+            depth = 0;
 
             if (exitCode == ExitCode.ERROR && !(inputCommand[0].equals("execute_script") && !inputCommand[1].isEmpty())) {
                 console.println("Проверьте скрипт на корректность введенных данных!");
@@ -101,7 +131,7 @@ public class Executor {
         } catch (NoSuchElementException exception) {
             console.printError("Файл со скриптом пуст!");
         } catch (ScriptRecursionException exception) {
-            console.printError("Скрипты не могут вызываться рекурсивно!");
+            console.printError("Максимальная глубина рекурсии превышена!");
         } catch (IllegalStateException exception) {
             console.printError("Непредвиденная ошибка!");
             System.exit(0);
@@ -137,5 +167,13 @@ public class Executor {
                 return ExitCode.ERROR;
 
         return ExitCode.OK;
+    }
+
+
+
+    public Integer setMaxDepth(){
+        console.println("Введите максимальную глубину рекурсии");
+        var strMaxDepth = InputSteamer.getScanner().nextLine().trim();
+        return Integer.parseInt(strMaxDepth);
     }
 }
