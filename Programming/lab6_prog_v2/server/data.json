@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "d",
+    "coordinates": {
+      "x": 2.0,
+      "y": 1
+    },
+    "creationDate": "2023-05-17T11:47:48.8563019",
+    "price": null,
+    "unitOfMeasure": "LITERS",
+    "owner": {
+      "name": "f",
+      "birthday": null,
+      "height": 3,
+      "eyeColor": "GREEN",
+      "hairColor": "RED"
+    }
+  },
+  {
+    "id": 1,
+    "name": "a",
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "creationDate": "2023-05-17T11:45:22.9332593",
+    "price": 1,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  }
+]
