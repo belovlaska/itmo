@@ -1,0 +1,4 @@
+ma 
+mw 0010E80001
+mw 80C4101040
+mdecodeall
