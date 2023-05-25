@@ -25,7 +25,6 @@ public class Product implements Validateble, Comparable<Product>, Serializable {
     private Long price; // Поле может быть null, Значение поля должно быть больше 0
     private UnitOfMeasure unitOfMeasure; // Поле не может быть null
     private Person owner; // Поле может быть null
-    private static int nextId=1;
 
     public Product(int id, String name, Coordinates coordinates, LocalDateTime creationDate, Long price, UnitOfMeasure unitOfMeasure, Person owner) {
         this.id = id;
@@ -35,7 +34,6 @@ public class Product implements Validateble, Comparable<Product>, Serializable {
         this.price = price;
         this.unitOfMeasure = unitOfMeasure;
         this.owner = owner;
-        this.id = nextId++;
     }
 
     public Integer getId() {

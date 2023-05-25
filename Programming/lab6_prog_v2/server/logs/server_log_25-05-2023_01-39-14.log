@@ -1,0 +1,8 @@
+INFO  | 25-05-2023 01:39:14 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 01:39:14 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 01:39:14 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 01:39:14 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:39:59 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 01:40:50 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 01:40:50 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 01:40:59 | network.TCPServer - Request 'show' has been successfully processed.

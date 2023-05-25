@@ -71,13 +71,16 @@ public class Runner {
                             userScanner = scannerStack.pop();
                             console.println("Going back to the script '" + scriptStack.pop().getName() + "'...");
                         }
+                        InputSteamer.setScanner(userScanner);
                         if(fileMode()){
+                            InputSteamer.setFileMode(true);
                             userInput = userScanner.nextLine();
                             if(!userInput.isEmpty()){
                                 console.ps1();
                                 console.println(userInput);
                             }
                         } else {
+                            InputSteamer.setFileMode(false);
                             console.ps1();
                             userInput = userScanner.nextLine();
                         }

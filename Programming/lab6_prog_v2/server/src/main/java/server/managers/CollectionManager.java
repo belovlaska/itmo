@@ -73,7 +73,7 @@ public class CollectionManager {
         if (collection.isEmpty()) return "Collection is empty!";
 
         StringBuilder info = new StringBuilder();
-        for (var product : collection) {
+        for (var product : sort()) {
             info.append(product);
             info.append("\n\n");
         }
@@ -99,8 +99,14 @@ public class CollectionManager {
      *
      * @param element Element
      */
-    public void addToCollection(Product element) {
-        collection.add(element);
+    public int addToCollection(Product element) {
+        var maxId = collection.stream().filter(Objects::nonNull)
+                .map(Product::getId)
+                .mapToInt(Integer::intValue).max().orElse(0);
+        var newId = maxId + 1;
+        collection.add(element.copy(newId));
+        App.logger.info(collection);
+        return newId;
     }
 
     /**
@@ -190,6 +196,8 @@ public class CollectionManager {
         Set<String> uniqs = new LinkedHashSet<>();
         Set<String> dups = new HashSet<>();
         for(Product element: collection){
+            if(element.getOwner() == null)
+                continue;
             if(!uniqs.add(element.getOwner().getName()))
                 dups.add(element.getOwner().getName());
         }

@@ -1,31 +1,37 @@
 [
   {
-    "id": 1,
-    "name": "d",
+    "id": 2,
+    "name": "testnew",
     "coordinates": {
-      "x": 2.0,
-      "y": 1
+      "x": 100000.0,
+      "y": 1000
     },
-    "creationDate": "2023-05-17T11:47:48.8563019",
-    "price": null,
-    "unitOfMeasure": "LITERS",
-    "owner": {
-      "name": "f",
-      "birthday": null,
-      "height": 3,
-      "eyeColor": "GREEN",
-      "hairColor": "RED"
-    }
+    "creationDate": "2023-05-25T03:43:41.8393649",
+    "price": 3,
+    "unitOfMeasure": "PCS",
+    "owner": null
   },
   {
     "id": 1,
-    "name": "a",
+    "name": "testnew",
     "coordinates": {
-      "x": 1.0,
-      "y": 1
+      "x": 100000.0,
+      "y": 1000
     },
-    "creationDate": "2023-05-17T11:45:22.9332593",
-    "price": 1,
+    "creationDate": "2023-05-25T03:43:30.7648391",
+    "price": 3,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
+    "id": 3,
+    "name": "testnew",
+    "coordinates": {
+      "x": 100000.0,
+      "y": 1000
+    },
+    "creationDate": "2023-05-25T03:44:19.1605201",
+    "price": 3,
     "unitOfMeasure": "PCS",
     "owner": null
   }

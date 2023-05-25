@@ -1,0 +1,38 @@
+INFO  | 25-05-2023 03:09:42 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 03:09:42 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 03:09:42 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 03:09:42 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:09:42 | network.TCPServer - The connection with the client has been successfully established.
+WARN  | 25-05-2023 03:18:36 | network.TCPServer - Unexpected disconnection from the client!
+INFO  | 25-05-2023 03:18:36 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:18:45 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:18:56 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:22:42 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 03:22:42 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:22:47 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:22:50 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:22:50 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:22:50 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:24:31 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 03:24:31 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:24:36 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:24:46 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:24:46 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:24:46 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:24:46 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:24:46 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:24:46 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:24:46 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:24:46 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:25:14 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 03:25:14 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:25:28 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:25:46 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:25:46 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:25:46 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:25:46 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:25:51 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 03:25:51 | network.TCPServer - Listening port '1821'...
+WARN  | 25-05-2023 03:26:51 | network.TCPServer - Connection timeout exceeded!
+INFO  | 25-05-2023 03:26:51 | network.TCPServer - Shutting down the server...
+INFO  | 25-05-2023 03:26:51 | network.TCPServer - The server operation has been successfully completed.

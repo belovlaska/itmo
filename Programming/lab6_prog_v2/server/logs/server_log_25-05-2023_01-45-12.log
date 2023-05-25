@@ -1,0 +1,30 @@
+INFO  | 25-05-2023 01:45:12 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 01:45:12 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 01:45:12 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 01:45:12 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:45:18 | network.TCPServer - The connection with the client has been successfully established.
+WARN  | 25-05-2023 01:45:18 | network.TCPServer - Unexpected disconnection from the client!
+INFO  | 25-05-2023 01:45:18 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:45:24 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 01:45:41 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:45:54 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:46:09 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:46:25 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:46:36 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:46:43 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:46:52 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:47:35 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 01:47:41 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 02:53:40 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 02:53:40 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 02:53:52 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 02:54:00 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 02:55:44 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 02:55:44 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 02:55:48 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 02:55:56 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 02:55:59 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 02:55:59 | network.TCPServer - Listening port '1821'...
+WARN  | 25-05-2023 02:56:59 | network.TCPServer - Connection timeout exceeded!
+INFO  | 25-05-2023 02:56:59 | network.TCPServer - Shutting down the server...
+INFO  | 25-05-2023 02:56:59 | network.TCPServer - The server operation has been successfully completed.

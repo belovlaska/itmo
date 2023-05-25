@@ -10,7 +10,7 @@ import server.handlers.ResponseOutputer;
 public class ExecuteScriptCommand extends AbstractCommand {
 
     public ExecuteScriptCommand() {
-        super("execute_script", "<file_name>", "read and execute the script from the specified file. The script contains commands in the same form in which they are entered by the user in interactive mode.");
+        super("execute_script", "<file_name>", "read and execute the script from the specified file.");
     }
 
     /**

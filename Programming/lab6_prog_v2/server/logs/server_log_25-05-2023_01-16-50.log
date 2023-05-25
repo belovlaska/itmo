@@ -1,0 +1,29 @@
+INFO  | 25-05-2023 01:16:50 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 01:16:50 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 01:16:50 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 01:16:50 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:16:56 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 01:16:58 | network.TCPServer - Request 'print_unique_owner' has been successfully processed.
+INFO  | 25-05-2023 01:17:07 | network.TCPServer - Request 'help' has been successfully processed.
+INFO  | 25-05-2023 01:19:14 | network.TCPServer - Request 'help' has been successfully processed.
+INFO  | 25-05-2023 01:20:00 | network.TCPServer - Request 'info' has been successfully processed.
+INFO  | 25-05-2023 01:20:19 | network.TCPServer - Request 'filter_contains_name' has been successfully processed.
+INFO  | 25-05-2023 01:20:30 | network.TCPServer - Request 'show' has been successfully processed.
+INFO  | 25-05-2023 01:21:30 | network.TCPServer - Request 'help' has been successfully processed.
+INFO  | 25-05-2023 01:21:57 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 01:21:57 | network.TCPServer - Request 'remove_by_id' has been successfully processed.
+INFO  | 25-05-2023 01:22:10 | network.TCPServer - Request 'show' has been successfully processed.
+INFO  | 25-05-2023 01:22:31 | network.TCPServer - Request 'exit' has been successfully processed.
+INFO  | 25-05-2023 01:22:31 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 01:22:31 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:22:35 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 01:22:56 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 01:22:56 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 01:23:00 | network.TCPServer - Request 'show' has been successfully processed.
+INFO  | 25-05-2023 01:29:09 | network.TCPServer - Request 'exit' has been successfully processed.
+INFO  | 25-05-2023 01:29:09 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 01:29:09 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:29:16 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 01:29:55 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 01:29:55 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 01:30:00 | network.TCPServer - Request 'show' has been successfully processed.

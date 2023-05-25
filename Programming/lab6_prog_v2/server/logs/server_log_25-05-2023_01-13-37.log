@@ -1,0 +1,6 @@
+INFO  | 25-05-2023 01:13:38 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 01:13:38 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 01:13:38 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 01:13:38 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 01:13:43 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 01:13:49 | network.TCPServer - Request 'print_unique_owner' has been successfully processed.

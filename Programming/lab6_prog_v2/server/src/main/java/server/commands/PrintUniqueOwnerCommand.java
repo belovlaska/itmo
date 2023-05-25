@@ -21,8 +21,7 @@ public class PrintUniqueOwnerCommand extends AbstractCommand {
 
     public boolean execute(String stringArgument, Object objectArgument) {
         try{
-            if (stringArgument.isEmpty() || objectArgument != null) throw new WrongAmountOfElementsException();
-            String name = stringArgument;
+            if (!stringArgument.isEmpty() || objectArgument != null) throw new WrongAmountOfElementsException();
             var set = collectionManager.uniqueOwners();
             if(set.isEmpty()){
                 ResponseOutputer.appendln("There are no not null owners");

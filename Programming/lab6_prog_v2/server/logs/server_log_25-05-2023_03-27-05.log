@@ -1,0 +1,9 @@
+INFO  | 25-05-2023 03:27:06 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 03:27:06 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 03:27:06 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 03:27:06 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:27:11 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:27:29 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 25-05-2023 03:27:29 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:27:29 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:27:29 | network.TCPServer - Request 'execute_script' has been successfully processed.

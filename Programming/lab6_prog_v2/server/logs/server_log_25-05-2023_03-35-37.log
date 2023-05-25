@@ -1,0 +1,50 @@
+INFO  | 25-05-2023 03:35:38 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 03:35:38 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 03:35:38 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 03:35:38 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:35:42 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:35:47 | managers.CollectionManager - [Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:35:47.841541900
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 25-05-2023 03:35:47 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:35:47 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:35:54 | managers.CollectionManager - [Product id 2
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:35:54.889691200
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:35:47.841541900
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 25-05-2023 03:35:54 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:35:54 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:36:01 | managers.CollectionManager - [Product id 2
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:35:54.889691200
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:35:47.841541900
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 3
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:36:01.956890200
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 25-05-2023 03:36:01 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:36:01 | network.TCPServer - Request 'add' has been successfully processed.

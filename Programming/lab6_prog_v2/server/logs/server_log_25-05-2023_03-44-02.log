@@ -1,0 +1,29 @@
+INFO  | 25-05-2023 03:44:02 | managers.DumpManager - Collection successfully loaded!
+INFO  | 25-05-2023 03:44:02 | network.TCPServer - Starting the server...
+INFO  | 25-05-2023 03:44:02 | network.TCPServer - The server has been successfully started.
+INFO  | 25-05-2023 03:44:02 | network.TCPServer - Listening port '1821'...
+INFO  | 25-05-2023 03:44:07 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 25-05-2023 03:44:19 | managers.CollectionManager - 3
+INFO  | 25-05-2023 03:44:19 | managers.CollectionManager - [Product id 2
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:41.839364900
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:30.764839100
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 3
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:44:19.160520100
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 25-05-2023 03:44:19 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 25-05-2023 03:44:19 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 25-05-2023 03:45:06 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 25-05-2023 03:45:06 | network.TCPServer - Listening port '1821'...
