@@ -1,0 +1,4 @@
+INFO  | 16-05-2023 16:38:18 | managers.DumpManager - Boot file not found!
+INFO  | 16-05-2023 16:38:18 | managers.CollectionManager - All data are valid.
+ERROR | 16-05-2023 16:38:18 | network.TCPServer - Address already in use: bind
+INFO  | 16-05-2023 16:38:18 | managers.DumpManager - The file cannot be opened!

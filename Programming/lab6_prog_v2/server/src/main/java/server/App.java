@@ -8,6 +8,7 @@ import server.handlers.RequestHandler;
 import server.managers.CollectionManager;
 import server.managers.CommandManager;
 import server.managers.DumpManager;
+import server.network.ProcessingRequests;
 import server.network.TCPServer;
 
 public class App {
@@ -42,7 +43,7 @@ public class App {
                 new HelpCommand()
         );
         RequestHandler requestHandler = new RequestHandler(commandManager);
-        TCPServer server = new TCPServer(PORT, CONNECTION_TIMEOUT, requestHandler);
+        TCPServer server = new TCPServer(PORT, CONNECTION_TIMEOUT, new ProcessingRequests(requestHandler));
         server.run();
     }
 }

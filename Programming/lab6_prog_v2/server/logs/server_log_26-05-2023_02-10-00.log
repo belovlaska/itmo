@@ -1,0 +1,112 @@
+INFO  | 26-05-2023 02:10:00 | managers.DumpManager - Collection successfully loaded!
+INFO  | 26-05-2023 02:10:00 | network.TCPServer - Starting the server...
+INFO  | 26-05-2023 02:10:00 | network.TCPServer - The server has been successfully started.
+INFO  | 26-05-2023 02:10:00 | network.TCPServer - Listening port '1821'...
+INFO  | 26-05-2023 02:10:02 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 26-05-2023 02:10:28 | managers.CollectionManager - [Product id 4
+Name: a
+Coordinates: Coordinates{x=1.0, y=23}
+Date of creation: 2023-05-26T02:10:16.175649200
+Price: 1
+Unit of measure: PCS
+Owner:null, Product id 2
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:41.839364900
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:30.764839100
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 3
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:44:19.160520100
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 26-05-2023 02:10:28 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 26-05-2023 02:10:28 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 26-05-2023 02:10:32 | network.TCPServer - Request 'show' has been successfully processed.
+INFO  | 26-05-2023 02:24:58 | network.TCPServer - Request 'exit' has been successfully processed.
+INFO  | 26-05-2023 02:24:58 | network.TCPServer - The client has been successfully disconnected from the server!
+INFO  | 26-05-2023 02:24:58 | network.TCPServer - Listening port '1821'...
+INFO  | 26-05-2023 02:25:09 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 26-05-2023 02:25:15 | network.TCPServer - Request 'help' has been successfully processed.
+INFO  | 26-05-2023 02:25:35 | managers.CollectionManager - [Product id 4
+Name: a
+Coordinates: Coordinates{x=1.0, y=23}
+Date of creation: 2023-05-26T02:10:16.175649200
+Price: 1
+Unit of measure: PCS
+Owner:null, Product id 2
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:41.839364900
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 5
+Name: fff
+Coordinates: Coordinates{x=3.0, y=1}
+Date of creation: 2023-05-26T02:25:28.198900100
+Price: 1
+Unit of measure: PCS
+Owner:null, Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:30.764839100
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 3
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:44:19.160520100
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 26-05-2023 02:25:35 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 26-05-2023 02:25:35 | network.TCPServer - Request 'add' has been successfully processed.
+INFO  | 26-05-2023 02:25:40 | network.TCPServer - Request 'show' has been successfully processed.
+INFO  | 26-05-2023 02:26:01 | network.TCPServer - Request 'execute_script' has been successfully processed.
+INFO  | 26-05-2023 02:26:01 | managers.CollectionManager - [Product id 4
+Name: a
+Coordinates: Coordinates{x=1.0, y=23}
+Date of creation: 2023-05-26T02:10:16.175649200
+Price: 1
+Unit of measure: PCS
+Owner:null, Product id 2
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:41.839364900
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 5
+Name: fff
+Coordinates: Coordinates{x=3.0, y=1}
+Date of creation: 2023-05-26T02:25:28.198900100
+Price: 1
+Unit of measure: PCS
+Owner:null, Product id 1
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:43:30.764839100
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 3
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-25T03:44:19.160520100
+Price: 3
+Unit of measure: PCS
+Owner:null, Product id 6
+Name: testnew
+Coordinates: Coordinates{x=100000.0, y=1000}
+Date of creation: 2023-05-26T02:26:01.485564100
+Price: 3
+Unit of measure: PCS
+Owner:null]
+INFO  | 26-05-2023 02:26:01 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 26-05-2023 02:26:01 | network.TCPServer - Request 'add' has been successfully processed.

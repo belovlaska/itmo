@@ -1,5 +1,29 @@
 [
   {
+    "id": 4,
+    "name": "a",
+    "coordinates": {
+      "x": 1.0,
+      "y": 23
+    },
+    "creationDate": "2023-05-26T02:10:16.1756492",
+    "price": 1,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
+    "id": 7,
+    "name": "a",
+    "coordinates": {
+      "x": 0.1,
+      "y": 1
+    },
+    "creationDate": "2023-05-26T02:56:37.8460275",
+    "price": null,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
     "id": 2,
     "name": "testnew",
     "coordinates": {
@@ -8,6 +32,18 @@
     },
     "creationDate": "2023-05-25T03:43:41.8393649",
     "price": 3,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
+    "id": 5,
+    "name": "fff",
+    "coordinates": {
+      "x": 3.0,
+      "y": 1
+    },
+    "creationDate": "2023-05-26T02:25:28.1989001",
+    "price": 1,
     "unitOfMeasure": "PCS",
     "owner": null
   },
@@ -31,6 +67,30 @@
       "y": 1000
     },
     "creationDate": "2023-05-25T03:44:19.1605201",
+    "price": 3,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
+    "id": 6,
+    "name": "testnew",
+    "coordinates": {
+      "x": 100000.0,
+      "y": 1000
+    },
+    "creationDate": "2023-05-26T02:26:01.4855641",
+    "price": 3,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
+    "id": 8,
+    "name": "testnew",
+    "coordinates": {
+      "x": 100000.0,
+      "y": 1000
+    },
+    "creationDate": "2023-05-26T02:57:13.1113305",
     "price": 3,
     "unitOfMeasure": "PCS",
     "owner": null

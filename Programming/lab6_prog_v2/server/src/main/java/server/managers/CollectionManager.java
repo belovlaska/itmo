@@ -105,7 +105,6 @@ public class CollectionManager {
                 .mapToInt(Integer::intValue).max().orElse(0);
         var newId = maxId + 1;
         collection.add(element.copy(newId));
-        App.logger.info(collection);
         return newId;
     }
 

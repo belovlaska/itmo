@@ -6,6 +6,9 @@ import common.interaction.Response;
 import common.interaction.ResponseResult;
 import server.managers.CommandManager;
 
+import java.util.HashMap;
+import java.util.function.BiFunction;
+
 /**
  * Handles requests.
  */
@@ -22,7 +25,7 @@ public class RequestHandler {
      * @param request Request to be processed.
      * @return Response to request.
      */
-    public Response handle(Request request){
+    public Response handle(Request request) {
         commandManager.addToHistory(request.getCommandName());
         ResponseResult responseResult = executeCommand(
                 request.getCommandName(),
@@ -41,56 +44,32 @@ public class RequestHandler {
      */
     private ResponseResult executeCommand(String command, String commandStringArgument,
                                           Object commandObjectArgument) {
-
-        switch (command) {
-            case "":
-                break;
-            case "help":
-                if (!commandManager.help(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "info":
-                if (!commandManager.info(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "show":
-                if (!commandManager.show(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "add":
-                if (!commandManager.add(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "update":
-                if (!commandManager.update(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "remove_by_id":
-                if (!commandManager.removeById(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "remove_lower":
-                if (!commandManager.removeLower(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "clear":
-                if (!commandManager.clear(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "execute_script":
-                if (!commandManager.executeScript(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "add_if_max":
-                if (!commandManager.addIfMax(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "history":
-                if (!commandManager.history(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "print_unique_owner":
-                if (!commandManager.printUniqueOwner(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "filter_contains_name":
-                if (!commandManager.filterContainsName(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            case "filter_starts_with_name":
-                if (!commandManager.filterStartsWithName(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
-                break;
-            default:
-                ResponseOutputer.appendln("Command '" + command + "' was not found. Try to write 'help' for more info.");
-                return ResponseResult.ERROR;
+        if (command.isEmpty()) {
+            return ResponseResult.OK;
         }
+        var commands = new HashMap<String, BiFunction<String, Object, Boolean>>() {{
+            put("help", commandManager::help);
+            put("info", commandManager::info);
+            put("show", commandManager::show);
+            put("add", commandManager::add);
+            put("update", commandManager::update);
+            put("remove_by_id", commandManager::removeById);
+            put("remove_lower", commandManager::removeLower);
+            put("clear", commandManager::clear);
+            put("execute_script", commandManager::executeScript);
+            put("add_if_max", commandManager::addIfMax);
+            put("history", commandManager::history);
+            put("print_unique_owner", commandManager::printUniqueOwner);
+            put("filter_contains_name", commandManager::filterContainsName);
+            put("filter_starts_with_name", commandManager::filterStartsWithName);
+        }};
+        var currentCommand = commands.get(command);
+        if (currentCommand == null) {
+            ResponseOutputer.appendln("Command '" + command + "' was not found. Try to write 'help' for more info.");
+            return ResponseResult.ERROR;
+        }
+
+        if (!currentCommand.apply(commandStringArgument, commandObjectArgument)) return ResponseResult.ERROR;
         return ResponseResult.OK;
     }
 }

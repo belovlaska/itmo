@@ -21,12 +21,14 @@ public class TCPServer {
     private final int port;
     private final int soTimeout;
     private ServerSocket serverSocket;
-    private final RequestHandler requestHandler;
 
-    public TCPServer(int port, int soTimeout, RequestHandler requestHandler) {
+    private ProcessingRequests processingRequests;
+
+
+    public TCPServer(int port, int soTimeout, ProcessingRequests processingRequests) {
         this.port = port;
         this.soTimeout = soTimeout;
-        this.requestHandler = requestHandler;
+        this.processingRequests = processingRequests;
     }
 
     /**
@@ -38,7 +40,7 @@ public class TCPServer {
             boolean processingStatus = true;
             while (processingStatus){
                 try (Socket clientSocket = connectToClient()){
-                    processingStatus = processClientRequest(clientSocket);
+                    processingStatus = processingRequests.processClientRequest(clientSocket);
                 } catch (ConnectionErrorException | SocketTimeoutException exception){
                     break;
                 } catch (IOException exception){
@@ -103,31 +105,6 @@ public class TCPServer {
         }
     }
 
-    private boolean processClientRequest(Socket clientSocket) {
-        Request userRequest = null;
-        Response responseToUser;
-        try (ObjectInputStream clientReader = new ObjectInputStream(clientSocket.getInputStream());
-             ObjectOutputStream clientWriter = new ObjectOutputStream(clientSocket.getOutputStream())) {
-            do {
-                userRequest = (Request) clientReader.readObject();
-                responseToUser = requestHandler.handle(userRequest);
-                App.logger.info("Request '" + userRequest.getCommandName() + "' has been successfully processed.");
-                clientWriter.writeObject(responseToUser);
-                clientWriter.flush();
-            } while(responseToUser.getResponseResult() != ResponseResult.SERVER_EXIT);
-            return false;
-        } catch (ClassNotFoundException exception){
-            App.logger.warn("An error occurred while reading the received data!");
-        }catch (InvalidClassException | NotSerializableException exception) {
-            App.logger.warn("An error occurred when sending data to the client!");
-        } catch (IOException exception) {
-            if (userRequest == null) {
-                App.logger.warn("Unexpected disconnection from the client!");
-            } else {
-                App.logger.info("The client has been successfully disconnected from the server!");
-            }
-        }
-        return true;
-    }
+
 
 }
