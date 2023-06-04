@@ -3,11 +3,8 @@ package server.network;
 import common.exceptions.ClosingSocketException;
 import common.exceptions.ConnectionErrorException;
 import common.exceptions.OpeningServerSocketException;
-import common.interaction.Request;
-import common.interaction.Response;
-import common.interaction.ResponseResult;
+
 import server.App;
-import server.handlers.RequestHandler;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -22,13 +19,13 @@ public class TCPServer {
     private final int soTimeout;
     private ServerSocket serverSocket;
 
-    private ProcessingRequests processingRequests;
+    private RecievingManager recievingManager;
 
 
-    public TCPServer(int port, int soTimeout, ProcessingRequests processingRequests) {
+    public TCPServer(int port, int soTimeout, RecievingManager recievingManager) {
         this.port = port;
         this.soTimeout = soTimeout;
-        this.processingRequests = processingRequests;
+        this.recievingManager = recievingManager;
     }
 
     /**
@@ -37,10 +34,10 @@ public class TCPServer {
     public void run() {
         try{
             openServerSocket();
-            boolean processingStatus = true;
-            while (processingStatus){
+            while (true){
                 try (Socket clientSocket = connectToClient()){
-                    processingStatus = processingRequests.processClientRequest(clientSocket);
+                    var response = recievingManager.get(clientSocket);
+                    new SendingManager().send(clientSocket, response);
                 } catch (ConnectionErrorException | SocketTimeoutException exception){
                     break;
                 } catch (IOException exception){

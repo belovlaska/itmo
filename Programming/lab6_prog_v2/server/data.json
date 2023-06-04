@@ -48,6 +48,30 @@
     "owner": null
   },
   {
+    "id": 10,
+    "name": "2",
+    "coordinates": {
+      "x": 2.0,
+      "y": 2
+    },
+    "creationDate": "2023-06-02T03:03:54.4763099",
+    "price": 2,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
+    "id": 9,
+    "name": "2",
+    "coordinates": {
+      "x": 1.0,
+      "y": 6
+    },
+    "creationDate": "2023-06-01T03:16:11.8721661",
+    "price": null,
+    "unitOfMeasure": "PCS",
+    "owner": null
+  },
+  {
     "id": 1,
     "name": "testnew",
     "coordinates": {
@@ -55,18 +79,6 @@
       "y": 1000
     },
     "creationDate": "2023-05-25T03:43:30.7648391",
-    "price": 3,
-    "unitOfMeasure": "PCS",
-    "owner": null
-  },
-  {
-    "id": 3,
-    "name": "testnew",
-    "coordinates": {
-      "x": 100000.0,
-      "y": 1000
-    },
-    "creationDate": "2023-05-25T03:44:19.1605201",
     "price": 3,
     "unitOfMeasure": "PCS",
     "owner": null

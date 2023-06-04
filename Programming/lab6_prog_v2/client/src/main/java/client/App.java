@@ -1,6 +1,6 @@
 package client;
 import client.cli.Runner;
-import client.network.ProcessingRequests;
+
 import client.network.TCPClient;
 import client.utils.console.Console;
 
@@ -18,8 +18,6 @@ public class App {
 
     private static final Console console = new Console();
     public static final Logger logger = LogManager.getLogger("ClientLogger");
-    private static final int RECONNECTION_TIMEOUT = 5 * 1000;
-    private static final int MAX_RECONNECTION_ATTEMPTS = 5;
 
     private static String host;
     private static int port;
@@ -56,12 +54,10 @@ public class App {
     }
 
     public static void main(String[] args) {
-        args = new String[]{"localhost", "1821"};
         if (!initializeConnectionAddress(args)) return;
-        var userScanner = new Scanner(System.in);
-        Runner runner = new Runner(userScanner);
-        TCPClient client = new TCPClient(host, port, RECONNECTION_TIMEOUT, MAX_RECONNECTION_ATTEMPTS, new ProcessingRequests(runner));
-        client.run();
-        userScanner.close();
+
+        var client = new TCPClient(host, port);
+        var runner = new Runner(console, client);
+        runner.run();
     }
 }
