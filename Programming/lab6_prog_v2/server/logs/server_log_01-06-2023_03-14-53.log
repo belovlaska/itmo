@@ -1,0 +1,36 @@
+INFO  | 01-06-2023 03:14:53 | managers.DumpManager - Collection successfully loaded!
+INFO  | 01-06-2023 03:14:53 | network.TCPServer - Starting the server...
+INFO  | 01-06-2023 03:14:53 | network.TCPServer - The server has been successfully started.
+INFO  | 01-06-2023 03:14:53 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:15:09 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:15:09 | network.ProcessingRequests - Request 'help' has been successfully processed.
+INFO  | 01-06-2023 03:15:09 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:15:09 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:15:24 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:15:24 | network.ProcessingRequests - Request 'show' has been successfully processed.
+INFO  | 01-06-2023 03:15:24 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:15:24 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:15:29 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:15:29 | network.ProcessingRequests - Request 'info' has been successfully processed.
+INFO  | 01-06-2023 03:15:29 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:15:29 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:15:44 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:15:44 | network.ProcessingRequests - Request 'info' has been successfully processed.
+INFO  | 01-06-2023 03:15:44 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:15:44 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:16:22 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:16:22 | managers.DumpManager - Collection successfully saved to file!
+INFO  | 01-06-2023 03:16:22 | network.ProcessingRequests - Request 'add' has been successfully processed.
+INFO  | 01-06-2023 03:16:22 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:16:22 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:16:22 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:16:22 | network.ProcessingRequests - Request 'add' has been successfully processed.
+INFO  | 01-06-2023 03:16:22 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:16:22 | network.TCPServer - Listening port '1821'...
+INFO  | 01-06-2023 03:16:32 | network.TCPServer - The connection with the client has been successfully established.
+INFO  | 01-06-2023 03:16:32 | network.ProcessingRequests - Request 'show' has been successfully processed.
+INFO  | 01-06-2023 03:16:32 | network.ProcessingRequests - The client has been successfully disconnected from the server!
+INFO  | 01-06-2023 03:16:32 | network.TCPServer - Listening port '1821'...
+WARN  | 01-06-2023 03:17:32 | network.TCPServer - Connection timeout exceeded!
+INFO  | 01-06-2023 03:17:32 | network.TCPServer - Shutting down the server...
+INFO  | 01-06-2023 03:17:32 | network.TCPServer - The server operation has been successfully completed.
